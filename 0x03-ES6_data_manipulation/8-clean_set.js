@@ -4,7 +4,7 @@ export default function cleanSet(set, startString) {
   }
   const string = [];
   set.forEach((item) => {
-    if (item.startsWith(startString) && typeof item === 'string') {
+    if (item.startsWith(startString) && item !== startString) {
       const remainingString = item.slice(3);
       string.push(remainingString);
     }
