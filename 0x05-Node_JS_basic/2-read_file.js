@@ -26,7 +26,7 @@ function countStudents(path) {
       }
       lineNo += 1;
     }
-    console.log(`Number of Students: ${obj.totalStudents}`);
+    console.log(`Number of students: ${obj.totalStudents}`);
     console.log(`Number of students in CS: ${obj.CS}. List: ${obj.CSStudents.join(', ')}`);
     console.log(`Number of students in SWE: ${obj.SWE}. List: ${obj.SWEStudents.join(', ')}`);
   } catch (err) {
