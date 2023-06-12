@@ -9,7 +9,7 @@ function countStudents(path) {
       const obj = {};
       let totalStudents = 0;
       let lineNo = 0;
-      for (const line of data.split('\n')) {
+      for (const line of data.trim().split('\n')) {
         if (lineNo !== 0) {
           const tokens = line.split(',');
           if (tokens[3] in obj) {
