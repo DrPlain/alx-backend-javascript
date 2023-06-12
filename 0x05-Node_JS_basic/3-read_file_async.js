@@ -29,7 +29,8 @@ function countStudents(path) {
       for (const key of Object.keys(obj)) {
         result.push(`Number of students in ${key}: ${obj[key].counts}. List: ${obj[key].students.join(', ')}`);
       }
-      resolve(console.log(result.join('\n')));
+      console.log(result.join('\n'));
+      resolve(result);
     });
   });
 }
