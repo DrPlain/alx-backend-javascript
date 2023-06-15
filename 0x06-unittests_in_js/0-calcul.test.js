@@ -1,6 +1,6 @@
 const assert = require('assert');
 const calculateNumber = require('./0-calcul');
-const { describe, it } = require('node:test');
+
 
 describe('calculateNumber', function() {
     it('Does not round integers', function() {
@@ -14,6 +14,17 @@ describe('calculateNumber', function() {
     it('Rounds down first and rounds up second number', function() {
         result = calculateNumber(1.2, 3.7);
         assert.strictEqual(result, 5);
+    });
+    it('floating point whole numbers', () => {
+        assert.strictEqual(calculateNumber(1.0, 2.0), 3);
+      });
+    
+    it('rounding down b\'s floating point fractional number', () => {
+    assert.strictEqual(calculateNumber(1.0, 2.4), 3);
+    });
+
+    it('rounding down a and b\'s floating point fractional number', () => {
+    assert.strictEqual(calculateNumber(1.4, 2.4), 3);
     });
     it('Rounds up first and second number', function() {
         result = calculateNumber(1.5, 3.7);
