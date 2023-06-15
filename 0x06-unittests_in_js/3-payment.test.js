@@ -6,10 +6,10 @@ const { expect } = chai;
 
 describe('sendPaymentRequestToApi', function () {
   it('Validate the usage of the Utils function', function () {
-    const calculateNumberSpy = sinon.spy(Utils.calculateNumber);
+    const spy = sinon.spy(Utils);
 
     sendPaymentRequestToApi(100, 20);
-    expect(calculateNumberSpy.calledWith('SUM', 100, 20)).to.be.true;
-    expect(calculateNumberSpy.callCount).to.equal(1);
+    expect(spy.calculateNumber.calledWith('SUM', 100, 20)).to.be.true;
+    expect(spy.calculateNumber.callCount).to.equal(1);
   });
 });
